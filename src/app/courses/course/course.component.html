@@ -1,0 +1,19 @@
+<div class="movie-container">
+    <div>
+        <img [src]="course[0].image" width="560" height="280" />
+    </div>
+    <div>
+        <h1 style="text-align: center">{{ course[0].name }}</h1>
+    </div>
+    <div class="novie-details">
+        <div style="margin: 0px 10px"><b>Author: </b>{{ course[0].author }}</div>
+        <div style="margin: 0px 10px"><b>Duration: </b>{{ course[0].duration }}</div>
+        <div style="margin: 0px 10px"><b>Type: </b>{{ course[0].type }}</div>
+    </div>
+    <div style="margin: 0px 10px">
+        <h2>Price: {{ course[0].price }}$</h2>
+    </div>
+    <div style="margin: 20px 10px">
+        <p>{{ course[0].description }}</p>
+    </div>
+</div>

@@ -1,14 +1,14 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.css'],
+  styleUrls: ['./filter.component.css']
 })
-export class FilterComponent implements OnInit {
-  constructor() {}
+export class FilterComponent {
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   @Input('total') all: number = 0;
   @Input() free: number = 0;
   @Input() premium: number = 0;

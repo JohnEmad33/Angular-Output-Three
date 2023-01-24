@@ -11,9 +11,10 @@ import { MoviesComponent } from './movies/movies.component';
 import { MoviesService } from './Services/movies.service';
 import { MovieComponent } from './movies/movie/movie.component';
 import { HomeComponent } from './home/home.component';
-import { ErrorComponent } from './error/error.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { ErrorComponent } from './error/error.component';
+import { CourseComponent } from './courses/course/course.component';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     HomeComponent,
     ErrorComponent,
     NavbarComponent,
+    CourseComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
