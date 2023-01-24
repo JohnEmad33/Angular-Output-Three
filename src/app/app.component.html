@@ -1,33 +1,5 @@
 <div class="container">
+  <app-navbar></app-navbar>
   <app-header></app-header>
-  <app-filter-list
-    (filterRadioButtonSelectionChanged)="onFilterRadioButtonChanged($event)"
-  >
-  </app-filter-list>
-  <!-- *ngIf="CountRadioButton === 'AllCourses'; else movies" -->
-  <ng-container [ngSwitch]="CountRadioButton">
-    <ng-container *ngSwitchCase="'AllCourses'">
-      <app-courses #course></app-courses>
-      <p>you bought this course : {{ course.boughtCourse?.name }}</p>
-      <P
-        >the complete course details :
-        {{ course.detailsCourse?.description }}</P
-      >
-    </ng-container>
-    <ng-container *ngSwitchCase="'AllMovies'">
-      <app-movies #movie></app-movies>
-      <p>you bought this movies : {{ movie.boughtMovie?.name }}</p>
-      <P>the complete movie details : {{ movie.detailsMovie?.description }}</P>
-    </ng-container>
-    <ng-container *ngSwitchDefault>
-      <app-courses #course></app-courses>
-      <app-movies #movie></app-movies>
-    </ng-container>
-</ng-container>
+  <router-outlet></router-outlet>
 </div>
-
-<!-- <ng-template #movies>
-    <app-movies #movie></app-movies>
-    <p>you bought this movies : {{ movie.boughtMovie?.name }}</p>
-    <P>the complete movie details : {{ movie.detailsMovie?.description }}</P>
-  </ng-template> -->

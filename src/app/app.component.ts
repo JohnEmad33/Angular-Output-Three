@@ -6,10 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'AngularDataBinding';
-  CountRadioButton: string = 'AllCourses';
-  
-  onFilterRadioButtonChanged(data: string) {
-    this.CountRadioButton = data;
-  }
+  title = 'AngularOutputThree';
+
 }

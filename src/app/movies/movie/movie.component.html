@@ -1,0 +1,20 @@
+<div class="movie-container">
+  <div>
+    <img src="{{ movie.image }}" width="560" height="280" />
+  </div>
+  <div>
+    <h1 style="text-align: center">{{ movie.name }}</h1>
+  </div>
+  <div class="novie-details">
+    <div style="margin: 0px 10px"><b>Author: </b>{{ movie.author }}</div>
+    <div style="margin: 0px 10px"><b>Duration: </b>{{ movie.duration }}</div>
+    <div style="margin: 0px 10px"><b>Type: </b>{{ movie.type }}</div>
+  </div>
+  <div style="margin: 0px 10px">
+    <h2>Price: {{ movie.price }}$</h2>
+  </div>
+  <div style="margin: 20px 10px">
+    <p>{{ movie.description }}</p>
+  </div>
+</div>
+

@@ -1,8 +1,16 @@
 <div class="serch-container">
-  <span>Search:</span>
+  <span><b>Search:</b></span>
   <input
     type="text"
     [(ngModel)]="enteredSerchValue"
     (input)="onSearchTextChanged()"
+    style="height: 37px"
   />
+  <button
+    (click)="onSearchClicked()"
+    class="btn btn-primary"
+    style="margin: 10px"
+  >
+    Search
+  </button>
 </div>
