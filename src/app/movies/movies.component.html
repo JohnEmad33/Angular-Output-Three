@@ -1,0 +1,52 @@
+<div>
+  <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+  <app-filter
+    [total]="getTotalMovies()"
+    [free]="getTotalFreeMovies()"
+    [premium]="getTotalPremiumMovies()"
+    (filterRadioButtonSelectionChanged)="onFilterRadioButtonChanged($event)"
+  ></app-filter>
+</div>
+
+<ng-container *ngFor="let movie of movies">
+  <ng-container *ngIf="movieCountRadioButton === 'All' || movieCountRadioButton === movie.type">
+    <!-- courseCountRadioButton === 'All' || courseCountRadioButton === course.type -->
+    <div
+      class="course-container"
+      *ngIf="
+        searchText === '' || movie.name.toLowerCase().includes(searchText)
+      "
+    >
+      <div class="course-card">
+        <div>
+          <img [src]="movie.image" style="width: 220px; height: 140px" />
+        </div>
+        <div class="course-name">
+          <span
+            ><b>{{ movie.name }}</b></span
+          >
+        </div>
+        <div class="course-description">
+          <p>{{ movie.description.slice(0, 80) }}...</p>
+        </div>
+        <div class="details">
+          <div
+            class="course-type"
+            [ngStyle]="{ color: movie.type === 'Free' ? 'Green' : 'Red' }"
+          >
+            {{ movie.type }}
+          </div>
+          <div class="course-price"><b>Price:</b> ${{ movie.price }}</div>
+        </div>
+        <div class="course-buttons">
+          <button class="btn btn-buy" (click)="boughtMovie = movie">
+            <b>Buy Now</b>
+          </button>
+          <button class="btn btn-show" (click)="detailsMovie = movie">
+            <b>Show Deatils</b>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>
